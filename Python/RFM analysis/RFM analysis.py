@@ -2,7 +2,7 @@
 """
 Created on Fri Mar 31 15:01:02 2023
 
-@author: ASUS
+
 """
 
 import pandas as pd
@@ -10,8 +10,8 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import squarify
 
-orders = pd.read_excel('E:\\Final_project_RFM\Dataset.xlsx')
-returned = pd.read_excel('E:\\Final_project_RFM\Dataset.xlsx', 4)
+orders = pd.read_excel('...\Dataset.xlsx')
+returned = pd.read_excel('...\Dataset.xlsx', 4)
 orders = orders[~orders['Order ID'].isin(returned['Order ID'])]
 
 frequency = orders.groupby('Customer ID')['Order ID'].nunique()
